@@ -2,8 +2,17 @@
 
 ## install
 
-1. git clone `git@github.com:everettjf/zlldb.git`
-2. add `command script import ~/zlldb/main.py` into `~/.lldbinit`
+### quick install
+
+```
+git clone https://github.com/everettjf/zlldb.git
+echo $'\ncommand script import ~/zlldb/main.py\n' > ~/.lldbinit
+```
+
+### manual
+
+1. git clone `https://github.com/everettjf/zlldb.git`
+2. manual add `command script import ~/zlldb/main.py` into `~/.lldbinit`
 
 ## command list
 
