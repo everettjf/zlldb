@@ -255,9 +255,13 @@ def zblock_disass_block_invoke_function(debugger, target, process, block_address
     debugger.HandleCommand(disass_cmd)
 
 def zblock_arch_for_target_is_64bit(target):
+    # like: x86_64h, x86_64
     arch_64 = ['arm64', 'x86_64']
     arch = target.GetTriple().split('-')[0]
-    return arch in arch_64
+    for arch64_item in arch_64:
+        if arch in arch64_item:
+            return True
+    return False
 
 def cmd_zblock(debugger, command, result, internal_dict):
     cmd_args = shlex.split(command)
